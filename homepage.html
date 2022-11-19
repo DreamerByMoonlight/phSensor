@@ -1,1 +1,115 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet"
+  <title> </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/spectrometer.css" rel="stylesheet" type="text/css">
+</head>
 
+<body>    
+    <div class="logpage">
+        <table id="summaryTable">
+        <tr><th><h2>A Scientific Spectrometer Logbook</h2>
+		Hi there! I'm Arabella, and I LOVE coding! At the ORCSGirls Lego Spectrometer Masterclass, we built spectrometers using the Raspberry Pi and legos. They basically seperate light! This is a scientific logbook of my findings, testing different light sources and transmission samples. You can search or click to see my spectra. Enjoy!
+		<input type="text" id="searchInput" onkeyup="myFunction()" placeholder=" Search by light source, date, or transmission sample...">
+		</th></tr>
+
+        <!--%%entry%%-->
+        <tr><td><img src="images/processed-20211210-124337.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>LED Lamp Bulb</strong><br>
+            Transmission sample: <strong>3D Snowflake Christmas Glasses</strong><br>
+            Date and time: <strong>Friday, December 10, 2021 @ 7:43 AM</strong><br>
+            <a href="experiment-20211210-124337.html" target="_blank"><button>Details</button></a></td></tr>
+        
+        <tr><td><img src="images/processed-20211210-122616.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>NeoPixel (RGB 0,150,150)</strong><br>
+            Transmission sample: <strong>None</strong><br>
+            Date and time: <strong>Friday, December 10, 2021 @ 7:26 AM</strong><br>
+            <a href="experiment-20211210-122616.html" target="_blank"><button>Details</button></a></td></tr>
+        
+        <tr><td><img src="images/processed-20211210-031706.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>NeoPixel (RGB 0,255,0)</strong><br>
+            Transmission sample: <strong>None</strong><br>
+            Date and time: <strong>Thursday, December 9, 2021 @ 10:17 PM</strong><br>
+            <a href="experiment-20211210-031706.html" target="_blank"><button>Details</button></a></td></tr>
+               
+        <tr><td><img src="images/processed-20211210-025100.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>Laser pointer</strong><br>
+            Transmission sample: <strong>None</strong><br>
+            Date and time: <strong>Thursday, December 9, 2021 @ 09:51 PM</strong><br>
+            <a href="experiment-20211210-025100.html" target="_blank"><button>Details</button></a></td></tr>
+        
+        <tr><td><img src="images/processed-20211210-022827.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>LED Bulb</strong><br>
+            Transmission sample: <strong>None</strong><br>
+            Date and time: <strong>Thursday, December 9, 2021 @ 09:28 PM</strong><br>
+            <a href="experiment-20211210-022827.html" target="_blank"><button>Details</button></a></td></tr>
+        
+        <tr><td><img src="images/processed-20211210-022254.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>CFL Bulb</strong><br>
+            Transmission sample: <strong>None</strong><br>
+            Date and time: <strong>Thursday, December 9, 2021 @ 09:22 PM</strong><br>
+            <a href="experiment-20211210-022254.html" target="_blank"><button>Details</button></a></td></tr>
+        
+        <tr><td><img src="images/processed-20211210-021610.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>LED Lamp Bulb</strong><br>
+            Transmission sample: <strong>None</strong><br>
+            Date and time: <strong>Thursday, December 9, 2021 @ 09:16 PM</strong><br>
+            <a href="experiment-20211210-021610.html" target="_blank"><button>Details</button></a></td></tr>
+        
+        <tr><td><img src="images/processed-20211210-021149.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>NeoPixel (RGB 0,0,255)</strong><br>
+            Transmission sample: <strong>None</strong><br>
+            Date and time: <strong>Thursday, December 9, 2021 @ 09:11 PM</strong><br>
+            <a href="experiment-20211210-021149.html" target="_blank"><button>Details</button></a></td></tr>
+        
+        <tr><td><img src="images/processed-20211210-015652.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>Black light (UV light)</strong><br>
+            Transmission sample: <strong>None</strong><br>
+            Date and time: <strong>Thursday, December 9, 2021 @ 08:56 PM</strong><br>
+            <a href="experiment-20211210-015652.html" target="_blank"><button>Details</button></a></td></tr>
+        
+        <tr><td><img src="images/processed-20211120-225858.jpg" align="right">
+            Scientist: <strong>Arabella</strong><br>
+            Light source: <strong>Laser Pointer</strong><br>
+            Transmission sample: <strong>100% Grapeseed Oil</strong><br>
+            Date and time: <strong>Saturday, November 20, 2021 @ 6:58 PM </strong><br>
+            <a href="experiment-20211120-225858.html" target="_blank"><button>See more...</button></a></td></tr>
+        
+
+        
+		<tr><th>&copy; <a href="https://www.orcsgirls.org">Oak Ridge Computer Science Girls</a> Master Class 2021</td></tr>
+        </table>
+    </div>
+	
+	<script>
+	function myFunction() {
+	  var input, filter, table, tr, td, i, txtValue;
+	  input = document.getElementById("searchInput");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("summaryTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+		  txtValue = td.textContent || td.innerText;
+		  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}       
+	  }
+	}
+	</script>
+</body>
+</html>
